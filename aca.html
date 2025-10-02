@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Bhirtsday, Sayangku🥰</title>
+    <title>Selamat Ulang Tahun, Khaerunisa!</title>
     <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -87,10 +87,10 @@
         <!-- Header & Initial Greeting -->
         <div id="initial-content">
             <h1 class="text-4xl md:text-5xl font-extrabold text-primary-pink mb-2">
-                Happy Bhirstday!
+                Selamat Ulang Tahun!
             </h1>
             <p class="text-xl md:text-2xl font-semibold mb-6 text-gray-700">
-                — Sayaangku🥰 —
+                — Sayangku😍 —
             </p>
 
             <!-- Placeholder Heart Icon -->
@@ -99,7 +99,7 @@
             </div>
             
             <p class="text-lg mb-8">
-                04 OKTOBER 2002. <br> 23 Tahun❤️
+                Yang Ke-23 Tahun. <br> 04 Oktober 2002
             </p>
 
             <!-- Action Button -->
@@ -108,7 +108,7 @@
                 onclick="revealMessage()"
                 class="bg-secondary-gold text-white font-bold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105 active:scale-95 text-lg w-full sm:w-auto"
             >
-                🎉 Buka Kejutan Ulang Tahun! 🎉
+                Buka ya😁
             </button>
         </div>
 
@@ -116,157 +116,7 @@
         <div id="message-content" class="hidden-message text-left mt-6 bg-background-light rounded-2xl shadow-inner border border-primary-pink/30">
             <div class="py-4">
                 <p class="text-primary-pink text-2xl font-bold mb-3 text-center">
-                    Surat Cinta untuk Khaerunisa
-                </p>
-                <p class="text-gray-800 leading-relaxed text-base md:text-lg italic">
-                    Kepada Khaerunisa yang luar biasa,
-                    <br><br>
-                    Selamat ulang tahun yang paling istimewa! Hari ini adalah hari untuk merayakan kehadiranmu, sosok yang membawa keceriaan dan inspirasi bagi semua orang di sekitarmu.
-                    <br><br>
-                    Semoga di usia yang baru ini, setiap langkahmu dipenuhi **kebahagiaan**, **kesehatan**, dan **kesuksesan** yang tak terhingga. Teruslah mengejar impianmu dengan semangat yang menyala, karena kamu pantas mendapatkan semua hal indah yang ada di dunia ini.
-                    <br><br>
-                    Semoga cinta dan tawa selalu mengiringi harimu. Kami sangat menyayangimu!
-                    <br><br>
-                    Dengan harapan dan doa terbaik,
-                    <br>
-                    <span class="font-bold text-primary-pink">Dari Seseorang yang Peduli.</span>
-                </p>
-                <div class="mt-6 text-center text-3xl">🎂🎁🎈</div>
-            </div>
-        </div>
-        
-    </div>
-    
-    <!-- Confetti Container (hidden until triggered) -->
-    <div id="confetti-container" class="confetti-container hidden"></div>
-
-    <script>
-        // Global variables
-        const revealButton = document.getElementById('reveal-button');
-        const messageContent = document.getElementById('message-content');
-        const initialContent = document.getElementById('initial-content');
-        const confettiContainer = document.getElementById('confetti-container');
-
-        /**
-         * Function to reveal the hidden birthday message and start effects.
-         */
-        function revealMessage() {
-            // 1. Reveal the message container with a smooth transition
-            messageContent.classList.add('revealed');
-            
-            // 2. Hide the button and update the header text
-            revealButton.style.display = 'none';
-            initialContent.querySelector('p:last-child').style.display = 'none'; // Hide "Sebuah pesan spesial..."
-            initialContent.querySelector('div').innerHTML = '✨'; // Change heart icon to sparkle
-
-            // 3. Start the visual celebration (confetti)
-            triggerConfetti();
-        }
-
-        /**
-         * Creates a specified number of CSS-based confetti elements.
-         */
-        function triggerConfetti() {
-            const colors = ['#FF69B4', '#FFD700', '#FFB6C1', '#ADD8E6', '#90EE90']; // Pink, Gold, Light Pink, Light Blue, Light Green
-            const count = 50;
-            
-            confettiContainer.classList.remove('hidden');
-
-            for (let i = 0; i < count; i++) {
-                const confetti = document.createElement('div');
-                confetti.classList.add('confetti');
-                
-                // Random position and delay for a natural fall
-                confetti.style.left = Math.random() * 100 + 'vw';
-                confetti.style.animationDelay = Math.random() * 3 + 's';
-                confetti.style.animationDuration = (3 + Math.random() * 2) + 's';
-                confetti.style.transform = 'translateY(-100vh) rotate(' + Math.random() * 360 + 'deg)';
-
-                // Random color and size
-                confetti.style.setProperty('--color', colors[Math.floor(Math.random() * colors.length)]);
-                confetti.style.width = confetti.style.height = (5 + Math.random() * 5) + 'px';
-                
-                confettiContainer.appendChild(confetti);
-
-                // Remove the confetti after animation ends to free up memory
-                confetti.addEventListener('animationend', () => {
-                    confetti.remove();
-                });
-            }
-            
-            // Optionally hide container after all confetti animations are done
-            setTimeout(() => {
-                // Ensure no new confetti is added after this point
-                if (confettiContainer.children.length === 0) {
-                    confettiContainer.classList.add('hidden');
-                }
-            }, 6000);
-        }
-
-        // Add Inter font link (optional, Tailwind usually defaults to system/sans-serif)
-        const fontLink = document.createElement('link');
-        fontLink.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap';
-        fontLink.rel = 'stylesheet';
-        document.head.appendChild(fontLink);
-    </script>
-</body>
-</html>
-
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            overflow: hidden;
-            z-index: 100;
-        }
-
-        .confetti {
-            position: absolute;
-            width: 8px;
-            height: 8px;
-            background-color: var(--color);
-            border-radius: 50%;
-            opacity: 0;
-        }
-    </style>
-</head>
-<body class="font-sans text-text-dark flex items-center justify-center p-4">
-
-    <!-- Main Card Container -->
-    <div id="card" class="bg-white p-6 md:p-10 shadow-2xl rounded-3xl max-w-lg w-full text-center transform transition duration-500 hover:scale-[1.01] border-4 border-secondary-gold/50">
-        
-        <!-- Header & Initial Greeting -->
-        <div id="initial-content">
-            <h1 class="text-4xl md:text-5xl font-extrabold text-primary-pink mb-2">
-                Happy Bhirstday!
-            </h1>
-            <p class="text-xl md:text-2xl font-semibold mb-6 text-gray-700">
-                — Sayaangku🥰 —
-            </p>
-
-            <!-- Placeholder Heart Icon -->
-            <div class="text-6xl mb-8 text-red-500 animate-pulseHeart">
-                💖
-            </div>
-            
-            <p class="text-lg mb-8">
-                04 OKTOBER 2002. <br> Klik di sini ya 
-            </p>
-
-            <!-- Action Button -->
-            <button 
-                id="reveal-button" 
-                onclick="revealMessage()"
-                class="bg-secondary-gold text-white font-bold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105 active:scale-95 text-lg w-full sm:w-auto"
-            >
-                🎉 Buka Kejutan Ulang Tahun! 🎉
-            </button>
-        </div>
-
-        <!-- Hidden Message Container -->
-        <div id="message-content" class="hidden-message text-left mt-6 bg-background-light rounded-2xl shadow-inner border border-primary-pink/30">
-            <div class="py-4">
-                <p class="text-primary-pink text-2xl font-bold mb-3 text-center">
-                    Surat Cinta untuk Khaerunisa
+                    Ucapan Khaerunisa
                 </p>
                 <p class="text-gray-800 leading-relaxed text-base md:text-lg italic">
                     Kepada Khaerunisa yang luar biasa,
